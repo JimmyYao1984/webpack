@@ -78,6 +78,26 @@ module.exports = [
 			}
 		},
 		stats
+	},
+	{
+		name: "name-too-long",
+		mode: "production",
+		entry: {
+			main: "./",
+			aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: "./a",
+			bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb: "./b",
+			cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc: "./c"
+		},
+		output: {
+			filename: "[name].js"
+		},
+		optimization: {
+			splitChunks: {
+				minSize: 0,
+				chunks: "all"
+			}
+		},
+		stats
 	}
 
 ];

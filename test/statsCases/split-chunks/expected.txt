@@ -192,3 +192,71 @@ Child manual:
         [0] ./d.js 20 bytes {2} {3} {4} {6} {7} {8} [built]
         [1] ./f.js 20 bytes {1} {3} {4} {7} {8} [built]
         [5] ./c.js 72 bytes {4} {8} [built]
+Child name-too-long:
+    Entrypoint main = main.js
+    Entrypoint aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~2.js vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.js aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.js
+    Entrypoint bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~2.js vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.js bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.js
+    Entrypoint cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~2.js vendors~async-c~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc.js cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc.js
+    chunk    {0} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~2.js (aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~2) 20 bytes <{9}> ={4}= ={12}= ={3}= ={11}= ={10}= ={1}= ={2}= ={8}= ={7}= ={6}= >{2}< >{5}< [initial] [rendered] split chunk (cache group: vendors) (name: vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccc~3)
+        > ./c cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        > ./b bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        > ./a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        > ./c [8] ./index.js 3:0-47
+        > ./b [8] ./index.js 2:0-47
+        > ./a [8] ./index.js 1:0-47
+        [2] ./node_modules/x.js 20 bytes {0} [built]
+    chunk    {1} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~1.js (aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~1) 20 bytes <{9}> ={0}= ={4}= ={2}= ={8}= ={3}= ={7}= ={6}= >{2}< >{5}< [rendered] split chunk (cache group: default) (name: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~async-c~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccc~1)
+        > ./c [8] ./index.js 3:0-47
+        > ./b [8] ./index.js 2:0-47
+        > ./a [8] ./index.js 1:0-47
+        [0] ./d.js 20 bytes {1} {10} {11} {12} [built]
+    chunk    {2} async-b~async-c~async-g~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc.js (async-b~async-c~async-g~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc) 20 bytes <{0}> <{3}> <{1}> <{6}> <{10}> <{9}> ={5}= ={0}= ={4}= ={1}= ={8}= ={3}= ={7}= [rendered] split chunk (cache group: default) (name: async-b~async-c~async-g~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc)
+        > ./g [] 6:0-47
+        > ./g [] 6:0-47
+        > ./c [8] ./index.js 3:0-47
+        > ./b [8] ./index.js 2:0-47
+        [1] ./f.js 20 bytes {2} {11} {12} [built]
+    chunk    {3} vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.js (vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb) 20 bytes <{9}> ={0}= ={11}= ={10}= ={1}= ={2}= ={7}= ={6}= >{2}< >{5}< [initial] [rendered] split chunk (cache group: vendors) (name: vendors~aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa~async-a~async-b~bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb)
+        > ./b bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        > ./a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        > ./b [8] ./index.js 2:0-47
+        > ./a [8] ./index.js 1:0-47
+        [3] ./node_modules/y.js 20 bytes {3} [built]
+    chunk    {4} vendors~async-c~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc.js (vendors~async-c~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc) 20 bytes <{9}> ={0}= ={12}= ={1}= ={2}= ={8}= [initial] [rendered] split chunk (cache group: vendors) (name: vendors~async-c~cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc)
+        > ./c cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        > ./c [8] ./index.js 3:0-47
+        [7] ./node_modules/z.js 20 bytes {4} [built]
+    chunk    {5} async-g.js (async-g) 34 bytes <{0}> <{3}> <{1}> <{6}> <{10}> ={2}= [rendered]
+        > ./g [] 6:0-47
+        > ./g [] 6:0-47
+        [9] ./g.js 34 bytes {5} [built]
+    chunk    {6} async-a.js (async-a) 156 bytes <{9}> ={0}= ={3}= ={1}= >{2}< >{5}< [rendered]
+        > ./a [8] ./index.js 1:0-47
+        [6] ./a.js + 1 modules 156 bytes {6} {10} [built]
+            | ./a.js 121 bytes [built]
+            | ./e.js 20 bytes [built]
+    chunk    {7} async-b.js (async-b) 72 bytes <{9}> ={0}= ={3}= ={1}= ={2}= [rendered]
+        > ./b [8] ./index.js 2:0-47
+        [4] ./b.js 72 bytes {7} {11} [built]
+    chunk    {8} async-c.js (async-c) 72 bytes <{9}> ={0}= ={4}= ={1}= ={2}= [rendered]
+        > ./c [8] ./index.js 3:0-47
+        [5] ./c.js 72 bytes {8} {12} [built]
+    chunk    {9} main.js (main) 147 bytes >{0}< >{3}< >{1}< >{2}< >{7}< >{6}< >{4}< >{8}< [entry] [rendered]
+        > ./ main
+        [8] ./index.js 147 bytes {9} [built]
+    chunk   {10} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.js (aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa) 176 bytes ={0}= ={3}= >{2}< >{5}< [entry] [rendered]
+        > ./a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        [0] ./d.js 20 bytes {1} {10} {11} {12} [built]
+        [6] ./a.js + 1 modules 156 bytes {6} {10} [built]
+            | ./a.js 121 bytes [built]
+            | ./e.js 20 bytes [built]
+    chunk   {11} bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.js (bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb) 112 bytes ={0}= ={3}= [entry] [rendered]
+        > ./b bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        [0] ./d.js 20 bytes {1} {10} {11} {12} [built]
+        [1] ./f.js 20 bytes {2} {11} {12} [built]
+        [4] ./b.js 72 bytes {7} {11} [built]
+    chunk   {12} cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc.js (cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc) 112 bytes ={0}= ={4}= [entry] [rendered]
+        > ./c cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        [0] ./d.js 20 bytes {1} {10} {11} {12} [built]
+        [1] ./f.js 20 bytes {2} {11} {12} [built]
+        [5] ./c.js 72 bytes {8} {12} [built]
